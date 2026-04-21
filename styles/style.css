@@ -1,209 +1,149 @@
 .header {
-display: grid;
-grid-template-columns: 1fr min-content 1fr;
-align-items: center;
-padding: 92px 50px 97px;
-grid-template-rows: 104px;
-
-}
-
-
-html {
-
-}
-  
-body {
-
-}
-
-h2 {
-}
-
-
-
-
-.header_logo {
-
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: 104px;
+  align-items: center;
+  padding: 92px 50px 97px;
 }
 
 .header_logo-image {
-    width: 136.5px;
-    height: 127px;
-    margin-top: 5px;
-    margin-left: 1px;
-
+  width: 136.5px;
+  height: 127px;
+  margin-top: 5px;
+  margin-left: 1px;
 }
-
-.header_menu {
-
-}
-
 
 .header_link-list {
-display: flex;
-gap: 30px;
-list-style: circle;
-}
-
-.header_link-list_general {
-
-
+  display: flex;
+  gap: 30px;
+  list-style: circle;
 }
 
 .header_link-list_general_active {
- border-bottom: none;
- font-size: 18px;
+  border-bottom: none;
+  font-size: 18px;
 }
 
 .header_link-list_see_lots {
   border-bottom: 1px solid black;
-  font-size: 18px;
   padding-left: 2px;
-}
-
-.header_link-list_see_lots_inactive {
-
+  font-size: 18px;
 }
 
 .header_link-list_about {
- border-bottom: 1px solid black;
- font-size: 18px;
- padding-left: 5px;
-}
-
-.header_link-list_about_inactive {
-
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+  font-size: 18px;
 }
 
 .address-block_header {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-self: end;
-    font-size: 18px;
-    line-height: 25px;
-    font-style: normal;
-    width: 240px;
-    text-underline-offset: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  align-items: flex-start;
+  width: 240px;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 25px;
+  text-underline-offset: 4px;
 }
 
-.address-block_header a {
- 
-}
-
-
+.address-block_header a {}
 
 .cover {
-  Width: 1100px;
-  Height: 757px;
+  position: relative;
+  width: 1100px;
+  height: 757px;
   text-align: center;
   background-color: #eee;
   background-image: url(../images/cover.jpg);
   background-position: center;
   background-size: cover;
-  position: relative;
-
-
 }
 
-.cover-image {
-
-}
+.cover-image {}
 
 .overlay {
-  Width: 100%;
-  Height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-
 
 .base-text {
-   color: #eee;
+  position: relative;
+  color: #eee;
   font-size: 100px;
+  letter-spacing: 30px;
   text-transform: uppercase;
-      letter-spacing: 30px;
-      position: relative;
 }
+
 .indent-upper {
-        top: 164px;
-    right: 154px;
-  
+  top: 164px;
+  right: 154px;
 }
+
 .indent-middle {
-    top: 299px;
-    right: 147px;
-  
-}
-.indent-bottom{ 
-      top: 317px;
-    left: 322px;
-  
+  top: 299px;
+  right: 147px;
 }
 
-
-span {
-  
+.indent-bottom {
+  top: 317px;
+  left: 322px;
 }
+
+span {}
 
 .cover-description {
-    display: flex;
-    align-items: baseline;
-    padding: 0px 50px 50px 50px;
-    gap: 107px;
-    color: #eee;
-    font-size: 22px;
-    text-transform: uppercase;
-    margin-top: 421px;
-    word-spacing: 18.4px;
-    white-space: nowrap;
-    position: relative;
-    
-
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 107px;
+  margin-top: 421px;
+  padding: 0px 50px 50px 50px;
+  color: #eee;
+  font-size: 22px;
+  text-transform: uppercase;
+  word-spacing: 18.4px;
+  white-space: nowrap;
 }
 
-.cover-description-text {
-
-}
+.cover-description-text {}
 
 .cover-description-button {
-    font-size: 22px;
-    text-transform: uppercase;
-    background: transparent;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(0, 0, 0);
-    color: white;
-    width: 256px;
-    height: 51px;
-    cursor: pointer;
-    white-space: nowrap;
+  width: 256px;
+  height: 51px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-
 .lots {
-
-  padding: 181px 24px 326px;
   margin: 0;
+  padding: 181px 24px 155px;
   list-style: none;
-
 }
 
 .lots_heading {
-    
-    padding: 0px 40px 26px;
-    font-size: 40px;
-    text-transform: uppercase;
+  padding: 0px 40px 26px;
+  font-size: 40px;
+  text-transform: uppercase;
 }
- 
+
 article {
-   height: 100%;
+  height: 100%;
 }
 
 .card {
+  position: relative;
   display: flex;
-   position: relative;
   flex-direction: column;
   justify-content: space-between;
   gap: 34px;
@@ -213,137 +153,140 @@ article {
   background-color: #000;
   background-position: center;
   background-size: cover;
-
-
 }
 
 .card_list-item {
-
-  width: 334px; /* ширина карточки */
-  min-height: 450px;
   position: relative;
-    color: #fff;
-    
+  width: 334px;
+  /* ширина карточки */
+  min-height: 450px;
+  color: #fff;
 }
 
 .lots_cards-list {
-    display: flex
-;
-    justify-content: space-between;
-    gap: 25px;
-    height: 100%;
-
-  
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  height: 100%;
 }
 
 .card-link {
-   
-   text-decoration: none;
+  text-decoration: none;
 }
 
 .card_type_film {
-background-image: url(../images/card-lot-01.jpg);
-background-size: cover;
-
+  background-image: url(../images/card-lot-01.jpg);
+  background-size: cover;
 }
 
 .card_type_book {
-background-image: url(../images/card-lot-02.jpg);
-background-size: cover;
+  background-image: url(../images/card-lot-02.jpg);
+  background-size: cover;
 }
 
 .card_type_picture {
-background-image: url(../images/card-lot-03.jpg);
-background-size: cover;
+  background-image: url(../images/card-lot-03.jpg);
+  background-size: cover;
 }
-
 
 .card_type_film,
-.card_type_book, 
+.card_type_book,
 .card_type_picture {
-  background-size: cover;
-  background-position: center;
-  height: 100%;
+  display: flex;
   display: flex;
   flex-direction: column;
-  display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
 }
-  
-
-
 
 .card_title {
-        z-index: 2;
-        font-size: 22px;
-        text-transform: uppercase;
-        line-height: 1.2;
-        text-decoration: underline;
-        text-decoration-thickness: 1px;
-        padding: 48px 41px 0px 40px;
-        text-underline-offset: 3px;
-
-   
-
+  z-index: 2;
+  padding: 48px 41px 0px 40px;
+  font-size: 22px;
+  line-height: 1.2;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-transform: uppercase;
 }
 
 .card_text {
+  position: relative;
 
-    position: relative;
-     font-size: 20px;
-   color: #fff;
-line-height: 120%;
-        
-        padding: 35px 40px 48px 40px;
-
+  padding: 35px 40px 48px 40px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
 }
 
-
- .view_more {
-    display: block;
-    text-underline-offset: 5px;
-    text-decoration-thickness: 1px;
-    padding-top: 29.5px;
-    color: black;
-    font-size: 20px;
-    margin-left: 40px;
- }
-
-
-.card_list-item {
-
+.view_more {
+  display: block;
+  margin-left: 40px;
+  padding-top: 29.5px;
+  color: black;
+  font-size: 20px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
 }
 
-.card-link {
-
-}
-
-.card lot_book {
-
-}
-                
-.card lot_picture {
-
-}
-                
 .about {
+  display: grid;
+  grid-template-columns: 334px 1fr;
+  grid-template-rows: 240px 1fr;
+  grid-template-areas:
+    "logo name"
+    ". text";
+  column-gap: 25px;
+  padding-left: 24px;
+}
+
+.logo {
+  display: flex;
+  grid-area: logo;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.about__logo-image {
+  width: 148px;
+  height: 114px;
+}
+
+h3 {}
+
+.name {
+  grid-area: name;
+  align-self: center;
+  margin-top: 9px;
+  font-size: 34px;
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+}
+
+.text {
+  grid-area: text;
+  font-size: 20px;
+  margin-top: 7px;
+  line-height: 24px;
+}
+
+
+.text p:nth-child(1) {
+  margin-bottom: 25px;
+  margin-right: 40px;
 
 }
 
-.about_column {
-
+.text p:nth-child(2) {
+margin-right: 24px;
 }
 
-.column {
-
-}
-
-.about_text {
-
-}
-
-.footer {
-
-}
-      
+.footer {}
