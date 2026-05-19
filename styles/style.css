@@ -3,7 +3,7 @@
   grid-template-columns: 1fr min-content 1fr;
   grid-template-rows: 104px;
   align-items: center;
-  padding: 92px 50px 97px;
+  padding: 92px 46px 97px;
 }
 
 .header_logo-image {
@@ -15,43 +15,42 @@
 
 .header_link-list {
   display: flex;
-  gap: 30px;
+  gap: 28px;
   list-style: circle;
 }
 
-.header_link-list_general_active {
-  border-bottom: none;
+.header_link-list_general {
   font-size: 18px;
-  cursor: pointer;
+  list-style: none;
+  /* убран маркер для навигации */
 }
 
-.header_link-list_see_lots {
-  border-bottom: 1px solid black;
-  padding-left: 2px;
+.header_link-list_menu {
+  padding-left: 4px;
   font-size: 18px;
 }
 
 .header_link-list_about {
-  border-bottom: 1px solid black;
-  padding-left: 5px;
-  font-size: 18px;
+  padding-left: 3px;
 }
 
-.header_link-list_see_lots_inactive {
-  cursor: pointer;
+.header_link-list_menu-active {
+  margin-left: 4px;
+  text-decoration: none;
 }
-
-.header_link-list_about_inactive {
-  cursor: pointer;
-}
+/*  убрано подчеркивание для "главная" */
 
 .address {
   justify-self: end;
   width: 244px;
-  margin-right: -4px;
   font-size: 18px;
   font-style: normal;
   line-height: 25px;
+  text-underline-offset: 4px;
+  /* убрано свойство margin-right: -4px;*/
+}
+
+.header_link-list a {
   text-underline-offset: 4px;
 }
 
@@ -65,9 +64,15 @@
 
 .overlay {
   position: absolute;
+  top: 0px;
+  right: 0px;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.title-group {
+  display: flex;
 }
 
 .base-text {
@@ -79,18 +84,15 @@
 }
 
 .indent-upper {
-  top: 164px;
-  right: 154px;
+  padding: 164px 0px 0px 50px;
 }
 
 .indent-middle {
-  top: 299px;
-  right: 147px;
+  padding: 17px 0px 0px 381px;
 }
 
 .indent-bottom {
-  top: 317px;
-  left: 322px;
+  padding: 18px 0px 0px 664px;
 }
 
 .cover-description {
@@ -98,7 +100,7 @@
   display: flex;
   align-items: baseline;
   gap: 107px;
-  margin-top: 421px;
+  margin-top: 105px;
   padding: 0px 50px 50px 50px;
   color: #eee;
   font-size: 22px;
@@ -109,7 +111,7 @@
 
 .cover-description-button {
   width: 256px;
-  height: 51px;
+  height: 50px;
   border-width: 1px;
   border-style: solid;
   border-color: rgb(0, 0, 0);
@@ -138,15 +140,14 @@ article {
 }
 
 .card {
-  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
   justify-content: space-between;
   gap: 34px;
+  gap: 25px;
   height: 100%;
-  padding: 48px 40px;
-  color: #fff;
-  background-color: #000;
   background-position: center;
   background-size: cover;
 }
@@ -158,36 +159,20 @@ article {
   color: #fff;
 }
 
-.lots_cards-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 25px;
-  height: 100%;
-}
-
 .card-link {
   text-decoration: none;
 }
 
-.card_type_film {
+.card--film {
   background-image: url(../images/card-lot-01.jpg);
-  background-size: cover;
 }
 
-.card_type_book {
+.card--book {
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
 }
 
-.card_type_film,
-.card_type_book,
-.card_type_picture {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  background-position: center;
-  background-size: cover;
+.card--picture {
+  background-image: url(../images/card-lot-03.jpg);
 }
 
 .card_title {
@@ -203,7 +188,9 @@ article {
 
 .card_text {
   position: relative;
-  padding: 35px 40px 48px 40px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px 40px 48px 40px;
   color: #fff;
   font-size: 20px;
   line-height: 120%;
@@ -212,7 +199,7 @@ article {
 .view_more {
   display: block;
   margin-left: 40px;
-  padding-top: 29.5px;
+  padding-top: 30px;
   color: black;
   font-size: 20px;
   text-decoration-thickness: 1px;
@@ -249,8 +236,8 @@ article {
 .about__title {
   grid-area: about__title;
   align-self: center;
-  margin-top: 9px;
-  font-size: 26px;
+  margin-top: 8px;
+  font-size: 39px;
   letter-spacing: 0.7px;
   text-transform: uppercase;
 }
@@ -262,13 +249,22 @@ article {
   line-height: 24px;
 }
 
-.about__text p:nth-child(1) {
-  margin-right: 40px;
+.about__text p {
   margin-bottom: 25px;
 }
 
+.about__text p:nth-child(1) {
+  width: 688px;
+}
+
 .about__text p:nth-child(2) {
-  margin-right: 24px;
+  width: 693px;
+}
+/* т.к. убран перенос "<br />" из html, то добавлено ограничение ширины в соответсвии с макетом Width
+693px для 2го параграфа, но к сожалению, на моем браузере не сходится текст с макетом, какую ширину я бы не выбирала*/
+
+.about__text p:last-child {
+  margin-bottom: 0;
 }
 
 .footer {
@@ -286,8 +282,8 @@ article {
 }
 
 .footer__menu-link_active {
-  border-bottom: none;
   font-size: 18px;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -310,7 +306,7 @@ article {
   text-underline-offset: 4px;
 }
 
-.footer__social-list-item {
+.footer__social-list {
   display: flex;
   gap: 48px;
   margin-top: 2px;
@@ -326,5 +322,6 @@ article {
 }
 
 .address_footer {
-  margin-right: 17px;
+  margin-right: 13px;
+  line-height: 25px;
 }
