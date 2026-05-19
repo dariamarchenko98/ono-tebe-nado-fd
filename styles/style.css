@@ -142,10 +142,7 @@ article {
 .card {
   display: flex;
   flex-wrap: wrap;
-
   justify-content: space-between;
-  justify-content: space-between;
-  gap: 34px;
   gap: 25px;
   height: 100%;
   background-position: center;
