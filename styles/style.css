@@ -16,29 +16,28 @@
 .header_link-list {
   display: flex;
   gap: 28px;
-  list-style: circle;
-}
-
-.header_link-list_general {
+  margin-left: 4px;
   font-size: 18px;
-  list-style: none;
-  /* убран маркер для навигации */
+  text-underline-offset: 4px;
+  list-style: circle;
+  cursor: pointer;
 }
 
 .header_link-list_menu {
-  padding-left: 4px;
-  font-size: 18px;
+  margin-top: 2px;
 }
 
-.header_link-list_about {
-  padding-left: 3px;
+.header_link-list_general {
+  list-style: none;
 }
 
 .header_link-list_menu-active {
-  margin-left: 4px;
   text-decoration: none;
 }
-/*  убрано подчеркивание для "главная" */
+
+.header_link-list_menu-inactive {
+  padding-left: 5px;
+}
 
 .address {
   justify-self: end;
@@ -46,11 +45,6 @@
   font-size: 18px;
   font-style: normal;
   line-height: 25px;
-  text-underline-offset: 4px;
-  /* убрано свойство margin-right: -4px;*/
-}
-
-.header_link-list a {
   text-underline-offset: 4px;
 }
 
@@ -72,27 +66,34 @@
 }
 
 .title-group {
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: 35px 346px 283px 88px;
+  grid-template-rows: 164px 135px 135px 135px;
+  height: 400px;
+  height: 657px;
 }
 
 .base-text {
-  position: relative;
   color: #eee;
   font-size: 100px;
   letter-spacing: 30px;
   text-transform: uppercase;
 }
 
-.indent-upper {
-  padding: 164px 0px 0px 50px;
+.base-text:nth-child(1) {
+  grid-column: 2;
+  grid-row: 2;
 }
 
-.indent-middle {
-  padding: 17px 0px 0px 381px;
+.base-text:nth-child(2) {
+  grid-column: 3 / 4;
+  grid-row: 3;
 }
 
-.indent-bottom {
-  padding: 18px 0px 0px 664px;
+.base-text:nth-child(3) {
+  grid-column: 4 / 5;
+  grid-row: 4;
 }
 
 .cover-description {
@@ -100,7 +101,6 @@
   display: flex;
   align-items: baseline;
   gap: 107px;
-  margin-top: 105px;
   padding: 0px 50px 50px 50px;
   color: #eee;
   font-size: 22px;
@@ -257,8 +257,6 @@ article {
 .about__text p:nth-child(2) {
   width: 693px;
 }
-/* т.к. убран перенос "<br />" из html, то добавлено ограничение ширины в соответсвии с макетом Width
-693px для 2го параграфа, но к сожалению, на моем браузере не сходится текст с макетом, какую ширину я бы не выбирала*/
 
 .about__text p:last-child {
   margin-bottom: 0;
@@ -272,19 +270,19 @@ article {
   padding: 179px 25px 78px;
 }
 
-.footer__menu-list {
+.footer__link-list {
   padding-top: 1px;
   text-align: center;
   list-style: none;
 }
 
-.footer__menu-link_active {
+.footer__link-list_menu-active {
   font-size: 18px;
   text-decoration: none;
   cursor: pointer;
 }
 
-.footer__menu-link {
+.footer__link-list_menu-inactive {
   font-size: 18px;
   text-decoration: underline;
   text-underline-offset: 4px;
